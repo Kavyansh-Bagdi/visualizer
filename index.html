@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML & CSS VISUALIZER</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <label style="display: block; width: 100%; text-align: center; font-size: 30px; background-color: royalblue; color: white;" >HTML & CSS VISUALIZER</label>
+        <div id="body">
+            <div class="boxs">
+                <div class="label">CSS Code</div><br>
+                <textarea name="text" id="script" readonly></textarea>
+            </div>
+            <div class="boxv">
+                <div id="button">Preview</div>
+            </div>
+            
+            <div class="box">
+                <div class="label">Basic</div><br>
+                <div class="input">
+                    <table>
+                        <tr>
+                            <td><label for="textbox">Text</label></td>
+                            <td><input style="width: 140%;padding: 5px;" type="text" id="textbox" value="Preview"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="width">Width</label></td>
+                            <td><input type="range" min="0" max="300" class="bar" id="width" value="200" ></td>
+                            <td><input type="text" min="0" max="300"  readonly id="widthvalue" value="200 px"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="height">Height</label></td>
+                            <td><input type="range" min="0" max="300" class="bar" id="height" value="77"></td>
+                            <td><input type="text" min="0" max="300"  readonly id="heightvalue" value="77 px"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="padding">Padding</label></td>
+                            <td><input type="range" min="0" max="100" class="bar" id="padding" value="0"></td>
+                            <td><input type="text" min="0" max="100"  readonly id="paddingvalue" value="0 px"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="borderradius">Border-Radius</label></td>
+                            <td><input type="range" min="0" max="150" class="bar" id="borderradius" value="0"></td>
+                            <td><input type="text" min="0" max="150"  readonly id="borderradiusvalue" value="0 px"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="backgroundcolor">Background-Color</label></td>
+                            <td></td>
+                            <td><input type="color" class="bar" id="backgroundcolor" value="#f0f0f0"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="color">Color</label></td>
+                            <td></td>
+                            <td><input type="color" class="bar" id="color"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>       
+            <div class="box">
+                <div class="label">text</div><br>
+                <div class="input">
+                    <table>
+                        <tr>
+                            <td><label for="fsize">Font-Size</label></td>
+                            <td><input type="range" min="0" max="200" class="bar" id="fsize" value="33" ></td>
+                            <td><input type="text" min="0" max="200"  readonly id="fsizevalue" value="33 px"></td> 
+                            <!-- determine max and minimum font size here -->
+                        </tr>
+                        <tr>
+                            <td><label for="weight">Weight</label></td>
+                            <td></td>
+                            <td><select name="weight" id="weight">
+                                <option value="normal">Normal</option>
+                                <option value="bold">Bold</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="decoration">Decoration</label></td>
+                            <td></td>
+                            <td><select name="decoration" id="decoration">
+                                <option value="none">none</option>
+                                <option value="overline">over</option>
+                                <option value="underline">under</option>
+                                <option value="line-through">through</option>
+                            </select></td>   
+                        </tr>
+                        <tr>
+                            <td><label for="case">Case</label></td>
+                            <td></td>
+                            <td><select name="case" id="case">
+                                <option value="none">none</option>
+                                <option value="uppercase">upper</option>
+                                <option value="lowercase">lower</option>
+                                <option value="capitalize">capital</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="variant">Variant</label></td>
+                            <td></td>
+                            <td><select name="variant" id="variant">
+                                <option value="normal">Normal</option>
+                                <option value="small-caps">Caps</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="fstyle">Style</label></td>
+                            <td></td>
+                            <td><select name="fstyle" id="fstyle">
+                                <option value="normal">normal;</option>
+                                <option value="italic">italic</option>
+                            </select></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>  
+            <div class="box">
+                <div class="label">Box-Shadow</div><br>
+                <div class="input">
+                    <table>
+                        <tr>
+                            <td><label for="right">Right</label></td>
+                            <td><input type="range" min="-100" max="100" class="bar" id="right" value="10" ></td>
+                            <td><input type="text" min="-100" max="100"  readonly id="rightvalue" value="10px"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="down">Down</label></td>
+                            <td><input type="range" min="-100" max="100" class="bar" id="down" value="10" ></td>
+                            <td><input type="text" min="-100" max="100"  readonly id="downvalue" value="10px"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="spread">Spread</label></td>
+                            <td><input type="range" min="0" max="100" class="bar" id="spread" value="0"></td>
+                            <td><input type="text" min="0" max="100"  readonly id="spreadvalue" value="0px"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="blur">Blur</label></td>
+                            <td><input type="range" min="0" max="100" class="bar" id="blur" value="0"></td>
+                            <td><input type="text" min="0" max="100"  readonly id="blurvalue" value="0px"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="shadowcolor">Shadow-Color</label></td>
+                            <td></td>
+                            <td><input type="color" min="0" max="100" class="bar" id="shadowcolor" value="#120d0d"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="inset">Inset</label></td>
+                            <td></td>
+                            <td><input type="checkbox" class="bar" id="inset"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>  
+            <div class="box">
+                <div class="label">Border / Outline</div><br>
+                <div class="input">
+                    <table>
+                        <tr>
+                            <td><label for="bwidth">Border-Width</label></td>
+                            <td><input type="range" min="0" max="100" class="bar" id="bwidth" value="2"></td>
+                            <td><input type="text" min="0" max="100"  readonly id="bwidthvalue" value="2 px"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bstyle">Border-Style</label></td>
+                            <td></td>
+                            <td><select name="bstyle" id="bstyle">
+                                <option value="solid">solid</option>
+                                <option value="dashed">dashed</option>
+                                <option value="dotted">dotted</option>
+                                <option value="double">double</option>
+                                <option value="groove">groove</option>      
+                                <option value="ridge">ridge</option>      
+                                <option value="inset">inset</option>      
+                                <option value="outset">outset</option>      
+                                <option value="hidden">hidden</option>      
+                                <option value="none">none</option>  
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bcolor">Border-Color</label></td>
+                            <td></td>
+                            <td><input type="color" class="bar" id="bcolor" value="#000000"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>  
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
